@@ -2755,8 +2755,8 @@
 
             // "use strict";
 
-            x = 3.14;
-            console.log(x);
+            // x = 3.14;
+            // console.log(x);
 
 
 
@@ -2767,5 +2767,56 @@
 //*********************************************************************************************
 
 
-      //SUB-SECTION - 21.1 : EVENT PROPOGATION
-      
+      //SUB-SECTION - 21.1 : EVENT PROPOGATION (See eventPropogation.html)
+
+      //SUB-SECTION - 21.2 : HIGHER ORDER FUNCTION
+                           // FUnction which takes another function as an argument is called the HOF.
+
+            //Example of Calculator
+                  
+                  // const add = (a, b) => {
+                  //       return a + b;
+                  // }
+
+                  // const sub = (a, b) => {
+                  //       return Math.abs(a - b);
+                  // }
+
+                  // const mult = (a, b) => {
+                  //       return a * b;
+                  // }
+
+                  // const calculator = ((num1, num2, operator) => {
+                  //       return operator(num1, num2);
+                  // });
+
+                  // console.log(calculator(3, 5, sub));
+
+//*********************************************************************************************
+
+// SECTION - 22  :       ✌️✌️✌️✌️ Asynchronous javaScript ✌️✌️✌️✌️
+
+//*********************************************************************************************
+
+
+      // SUBSECTION - 22.1 : HOISTING
+
+                  // We have creation phase and execution phase.
+                  
+                  //Hoisting in JavaScript is a mechanism where variables and functions
+                  //declarations are moved to the top of their scope before the code execution.
+
+
+                  //Example:
+                        console.log(myName);
+                        var myName;
+                        myName = "Utkars Singh Chouhan";
+
+                  //How it will be in output during the creation phase
+
+                        var myName;       //Here the value "undefined" is assigned to the variable by the JavaScript.
+                        console.log(myName);
+                        myName = "Utkarsh Singh Chouhan";
+
+
+                  //This feature will show an error, if we initialize a variable using 'let and 'const'.
