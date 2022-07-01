@@ -2880,4 +2880,51 @@
                   //A closure is the combination of a function bundled together with references
                   // to its urrounding state (i.e., the lexical environment)
 
-                  // In other words, a closure gives you access to parent function scope fromthe 
+                  // In other words, a closure gives you access to parent function scope from the 
+                  // inner function.
+
+                  // In JavaScript closures are created every time a function is created.
+
+                  
+
+                  // For Example⬇️
+
+                        // const outerFunction = (a) => {
+                        //       let b = 10;
+
+                        //       const innerFunction = () => {
+                        //             let sum = a + b;
+
+                        //             console.log(`The sum of the two number is ${sum}.`);
+                        //       }
+                        // }
+
+                        // outerFunction(5);
+
+                  
+
+                  //Another Example⬇️
+
+                        
+                        const parentFun = (a) => {
+                              let b = 10;
+
+                              const childFun = () => {
+                                    console.log(`The sum of  a and b is ${a + b}.`);
+                              }
+
+                              return childFun;  //the return statement does not execute the childFun - a function is executed
+                                                //only when folloed by (), but rater the return statement returns the entire body of the function.
+                        }
+
+                        let inner = parentFun(5);
+                        console.dir(inner);
+                        console.log(inner);
+                        console.log(inner());
+
+                        //In the above example,
+                        //      As soon as the parentFun returns, it gets destroyed but how we are getting the 
+                        //      value of a and b (both are part of the parentFun) through childFun upon calling the parentFun .
+
+                        //      This is due to the fact that parentFun stores the value of a and b in some place in memory
+                        //      for the childFun to use later, even after its destruction from the memory. That memory space repersents the "closure"
