@@ -2800,23 +2800,84 @@
 
 
       // SUBSECTION - 22.1 : HOISTING
-
-                  // We have creation phase and execution phase.
+      
+            // We have creation phase and execution phase.
                   
                   //Hoisting in JavaScript is a mechanism where variables and functions
                   //declarations are moved to the top of their scope before the code execution.
 
 
-                  //Example:
-                        console.log(myName);
-                        var myName;
-                        myName = "Utkars Singh Chouhan";
+                  // //Example:
+                  //       console.log(myName);
+                  //       var myName;
+                  //       myName = "Utkars Singh Chouhan";
 
-                  //How it will be in output during the creation phase
+                  // //How it will be in output during the creation phase
 
-                        var myName;       //Here the value "undefined" is assigned to the variable by the JavaScript.
-                        console.log(myName);
-                        myName = "Utkarsh Singh Chouhan";
+                  //       var myName;       //Here the value "undefined" is assigned to the variable by the JavaScript.
+                  //       console.log(myName);
+                  //       myName = "Utkarsh Singh Chouhan";
 
 
                   //This feature will show an error, if we initialize a variable using 'let and 'const'.
+                  //Hence after ES 2015(ES6), this feature is of no use.
+
+                  //In ES2015 "Hoisting" is avoided using the 'let' keyword instead of 'var'.
+                  //(The other difference is that variables declared with 'let' are local tot he surrounding
+                  //block, not the entire function)
+
+
+
+      // SUBSECTION - 22.2 : SCOPE CHAIN AND LEXIAL SCOPING IN JavaScript
+
+
+                  // The scope chain is used to resolve the value of variable names in JavaScript.
+
+                  // Scope chain in JavScript is Lexically defined, which  means we can see what 
+                  // the scope-chain will be just by looking at the code.
+
+                  // At the top we have the Global Scope which is the window object in the browser.
+
+
+
+
+            //Lexical Scoping:
+                  
+                  // It means that the inner function can get the access of the parent function variables,
+                  // But the vice-versa is not true.
+
+
+
+                  // Example⬇️
+
+
+                        // let a = "Hello Guys";
+
+                        // const parent = () => {
+
+                        //       let b = "Hellow How are U?";
+
+                        //       const child = () => {
+
+                        //             let c = "HI I am Fine thank U 🙏"; 
+
+                        //             console.log(a + b + c);       //here we have used string concatenation
+                        //             console.log(`${a} ${b} ${c}`);       //we can also do it like this by using Template-Literals
+                        //       }
+                              
+                        //       console.log(a + b + c);   //this will throw an error, as per Lexical Sciping. 
+                        //       child();
+                        // }
+
+                        // parent();
+
+
+
+
+      // SUBSECTION - 22.3 : CLOSURE IN JAVASCRIPT [😮😮😮 Very Important 😮😮😮]
+
+
+                  //A closure is the combination of a function bundled together with references
+                  // to its urrounding state (i.e., the lexical environment)
+
+                  // In other words, a closure gives you access to parent function scope fromthe 
