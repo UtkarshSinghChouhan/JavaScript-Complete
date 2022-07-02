@@ -2801,7 +2801,7 @@
 
       // SUBSECTION - 22.1 : HOISTING
       
-            // We have creation phase and execution phase.
+                  // We have creation phase and execution phase.
                   
                   //Hoisting in JavaScript is a mechanism where variables and functions
                   //declarations are moved to the top of their scope before the code execution.
@@ -2875,8 +2875,8 @@
 
 
       // SUBSECTION - 22.3 : CLOSURE IN JAVASCRIPT [😮😮😮 Very Important 😮😮😮]
-
-
+      
+      
                   //A closure is the combination of a function bundled together with references
                   // to its urrounding state (i.e., the lexical environment)
 
@@ -2906,25 +2906,91 @@
                   //Another Example⬇️
 
                         
-                        const parentFun = (a) => {
-                              let b = 10;
+                        // const parentFun = (a) => {
+                        //       let b = 10;
 
-                              const childFun = () => {
-                                    console.log(`The sum of  a and b is ${a + b}.`);
-                              }
+                        //       const childFun = () => {
+                        //             console.log(`The sum of  a and b is ${a + b}.`);
+                        //       }
 
-                              return childFun;  //the return statement does not execute the childFun - a function is executed
-                                                //only when folloed by (), but rater the return statement returns the entire body of the function.
-                        }
+                        //       return childFun;  //the return statement does not execute the childFun - a function is executed
+                        //                         //only when folloed by (), but rater the return statement returns the entire body of the function.
+                        // }
 
-                        let inner = parentFun(5);
-                        console.dir(inner);
-                        console.log(inner);
-                        console.log(inner());
+                        // let inner = parentFun(5);
+                        // console.dir(inner);
+                        // console.log(inner);
+                        // console.log(inner());
 
                         //In the above example,
                         //      As soon as the parentFun returns, it gets destroyed but how we are getting the 
                         //      value of a and b (both are part of the parentFun) through childFun upon calling the parentFun .
-
+                        
                         //      This is due to the fact that parentFun stores the value of a and b in some place in memory
                         //      for the childFun to use later, even after its destruction from the memory. That memory space repersents the "closure"
+
+
+
+                        
+      // SUBSECTION - 22.4 :SYNCHRONOUS AND ASYNCHONOUS JAVASCRIPT[😮😮😮 Very Important 😮😮😮]
+      
+      
+            // SYNCHRONOUS PROGRAMMING
+                  // Here in this case the Program is executed sequentially
+                  
+                  //For Example⬇️
+            
+                        // const func2 = () => {
+                              //       console.log(`Function 2️⃣ is called`);
+                        // }
+
+                        // const func1 = () => {
+                        //       console.log(`Function 1 is called`);
+                        //       func2();
+                        //       console.log(`Funcition 1 is called Again ✌️`);
+                        // }
+                        
+                        // func1();
+
+                  
+            // ASYNCHRONOUS PROGRAMMING
+            // After AJAX we have Asynchronous JavaScript
+
+
+                  //For Example⬇️
+
+                        // const func2 = () => {
+                        //       window.setTimeout(() => {                        //setTimeout() function is a part of Asynchronous Programming.
+                        //             console.log(`Function 2 2️⃣is called.`);
+                        //       }, 2000);
+                        // }
+
+                        // const func1 = () => {
+                        //       console.log(`Function 1 is called.`);
+                        //       func2();
+                        //       console.log(`Function 1 is called Again ✌️.`);
+                        // }
+
+                        // func1(); 
+
+
+
+                        
+      // SUBSECTION - 22.5 : EVENT LOOP IN JAVASCRIPT[😮😮😮 Very Important 😮😮😮]
+
+            // Every time a function is executed, an "execution context" is created in the "execution stack"(to remember : similar to stack formation
+            // during the function call in cpp) and when after the execution of the'return' statement it gets destroyed.
+
+            //But due to CLOSURE in JavaScript we can execess the variables and other inner-function even after the complete
+            // exection of the outer-function.
+
+
+
+
+
+//*********************************************************************************************
+
+// SECTION - 23  :       ✌️✌️✌️✌️ Asynchronous javaScript ✌️✌️✌️✌️
+
+//*********************************************************************************************
+      
