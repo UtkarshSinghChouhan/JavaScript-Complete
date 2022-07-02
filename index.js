@@ -2990,7 +2990,38 @@
 
 //*********************************************************************************************
 
-// SECTION - 23  :       ✌️✌️✌️✌️ Asynchronous javaScript ✌️✌️✌️✌️
+// SECTION - 23  :       ✌️✌️✌️✌️ Function Currying ✌️✌️✌️✌️  [😮😮 Very Important for interview purpose 😮😮]
 
 //*********************************************************************************************
       
+
+      //Currying a technique of evaluating function with multiple arguments, into sequence of function 
+      //with single argument.
+
+      //When a function instead of taking all the arguments at one time, take the first one and return
+      //a new function that takes the second one and returns a new function which takes the third one 
+      //and so forth, until all the arguments have been fulfilled.
+
+      //For Example ⬇️
+            // sum(5)(3)(8)
+
+
+                  // function sum(num1){
+                  //       console.log(num1);
+                  //       return function(num2)
+                  //       {
+                  //             console.log(num1, num2);
+                  //             return function(num3)
+                  //             {
+                  //                   console.log(num1, num2, num3);
+                  //                   console.log(`The sum of the three arguments is ${num1 + num2 + num3}`);
+                  //             }
+                  //       }
+                  // }
+
+            //We can write the above function by using the Fat-Arraow function as well
+
+                  // const sum = (num1) =>  (num2) => (num3) => console.log(`The sum of all three arguments is ${num1 + num2 + num3}.`);
+
+
+            // sum(5)(3)(8);
