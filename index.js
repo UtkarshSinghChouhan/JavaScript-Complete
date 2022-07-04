@@ -2995,7 +2995,7 @@
 //*********************************************************************************************
       
 
-      //Currying a technique of evaluating function with multiple arguments, into sequence of function 
+//Currying a technique of evaluating function with multiple arguments, into sequence of function 
       //with single argument.
 
       //When a function instead of taking all the arguments at one time, take the first one and return
@@ -3025,3 +3025,29 @@
 
 
             // sum(5)(3)(8);
+
+
+
+
+
+
+//*********************************************************************************************
+
+// SECTION - 24  :       ✌️✌️✌️✌️ Callback Hell ✌️✌️✌️✌️ 
+
+//*********************************************************************************************
+
+
+
+//*********************************************************************************************
+
+// SECTION - 25  :       ✌️✌️✌️✌️ XMLHttp Request ✌️✌️✌️✌️ 
+
+//*********************************************************************************************
+      
+      // XMLHttpRequest (XHR) are objects that are used to interact with the server.
+      // You can retrieve data from a URL without having to do a full page refresh
+      //This enables a webpage to update just a part of a page without disrupting what the user is doing.
+
+
+      
