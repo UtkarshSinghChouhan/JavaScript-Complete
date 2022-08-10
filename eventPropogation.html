@@ -40,6 +40,8 @@
         }
     </style>
 </head>
+
+
 <body>
     <div class="parentDiv" id="parentId">
         <div class="childDiv" id="childId">
@@ -66,7 +68,7 @@
         childId.addEventListener('click', () => {
             alert('Child Div called');
 
-            // event.stopPropagation();    //if U do not want the event propogation.
+            // event.stopPropagation();    //if U do not want the event propogation, it means it will not call the Parent div
 
         })
         

@@ -120,7 +120,7 @@
 
 
 
-// NaN === NaN;        
+// NaN === NaN;  //NaN is a "property" of the global object, it is neither a value not a datatype hence we cannot compare it with itself.      
 // Number.NaN === NaN; 
 // isNaN(NaN);         
 // isNaN(Number.NaN);  
@@ -319,7 +319,7 @@
 
 
 // 😳 4 Challenge Time 
-// What will be the output of 3**3? 
+// What will be the output of 3**3? [** - is known as 'exponentiation' operator]
 // What will be the output, when we add a number and a string?
 // Write a program to swap two numbers?
 // Write a program to swap two numbers without using third variable?
@@ -356,6 +356,8 @@
 
 // // output b=5; a=10
 
+
+// Swapping two number without the use of third variable
 // a = a + b; // a = 15
 // b = a - b; // b = 5; 
 // a = a - b; // a = 10;
