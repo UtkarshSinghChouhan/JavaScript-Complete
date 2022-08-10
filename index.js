@@ -2685,7 +2685,7 @@
                   
                   // let arr = Object.entries(obj);
 
-                  // console.log(Object.fromEntries(arr));   //Object.entries() convert array into the object 
+                  // console.log(Object.fromEntries(arr));   //Object.fromEntries() convert array into the object 
 
 
 // Sub-Section 19.3 ➡️ String.trimStart and String.trimEnd 🚩
